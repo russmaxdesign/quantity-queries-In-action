@@ -1,0 +1,77 @@
+/* -----------------------
+base styles
+------------------------*/
+
+body
+{
+	margin: 0;
+	padding: 20px;
+	color: #333;
+	background-color: #fff;
+	font: 1em/1.2 "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+}
+
+.container
+{
+	max-width: 1200px;
+	margin: 0 auto;
+	background: #eee;
+	overflow: auto;
+}
+
+/* -----------------------
+justified img
+------------------------*/
+
+.justified img
+{
+	float: left;
+	width: 9%;
+	margin: 0 3.83%;
+}
+
+/* -----------------------
+small screen
+------------------------*/
+
+@media (max-width: 700px)
+{		
+	.justified > img:nth-of-type(6),
+	.justified > img:nth-of-type(6) ~ img { display: none; }
+
+	.justified > img:last-of-type { display: block !important; }
+}
+
+/* -----------------------
+medium screen
+------------------------*/
+
+@media (min-width: 701px) and (max-width: 1000px)
+{	
+	.justified img
+	{
+		width: 5%;
+		margin: 0 2.5%;
+	}
+	
+	.justified > img:nth-of-type(10),
+	.justified > img:nth-of-type(10) ~ img { display: none; }
+
+	.justified > img:last-of-type { display: block !important; }
+}
+
+/* -----------------------
+wide screen
+------------------------*/
+
+@media (min-width: 1001px)
+{	
+	.justified img
+	{
+		width: 4.1%;
+		margin: 0 1.5%;
+	}
+	
+	.justified > img:nth-of-type(15),
+	.justified > img:nth-of-type(15) ~ img { display: none; }
+}
